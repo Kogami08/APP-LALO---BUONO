@@ -70,7 +70,7 @@
 
             <div data-role="header" data-position="fixed">
                 <a href="#loadPagePanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow"></a>
-                <h1>Load product</h1>
+                <h1>Cenas privadas</h1>
             </div>
 
             <div data-role="main" class="ui-content">
@@ -83,14 +83,14 @@
                 <div data-role="popup" id="popupUpdateDelete">
                     <div data-role="header">
                         <a class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-rel="back"></a>
-                        <h1>Options</h1>
+                        <h1>Opciones</h1>
                     </div>
                     <div data-role="main" class="ui-content">
                         <a class="ui-btn ui-icon-delete ui-btn-icon-left ui-btn-inline" onclick="deleteProduct()">
-                            Delete
+                            Eliminar
                         </a>
                         <a class="ui-btn ui-icon-edit ui-btn-icon-left ui-btn-inline" href="#updatedialog">
-                            Update
+                            Actualizar
                         </a>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
         
         <div data-role="dialog" id="updatedialog">
             <div data-role="header">
-                <h1>Update product</h1>
+                <h1>Actualizar producto</h1>
             </div>
             <div data-role="main" class="ui-content">
                 <form>
@@ -139,20 +139,20 @@
             </div>
             <div data-role="header" data-position="fixed">
                 <a href="#addEspecialPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow"></a>
-                <h1> R E S E R V A</h1>
+                <h1> Conoce a nuestros chefs</h1>
             </div>
 
             <div data-role="main" class="ui-content">
                 <form >
                     <div class="ui-fixed-contain">
-                        <label for="txtName">Nombre</label>
-                        <input type="text" id="txtName" data-clear-btn="true">
+                        <label for="txtNameEs">Nombre</label>
+                        <input type="text" id="txtNameEs" data-clear-btn="true">
 
-                        <label for="txtTelefono">Telefono</label>
-                        <input type="number" id="txtTelefono" data-clear-btn="true">
+                        <label for="txtTelefonoEs">Telefono</label>
+                        <input type="number" id="txtTelefonoEs" data-clear-btn="true">
 
                         <label for="btnAdd"></label>
-                            <a class="ui-btn ui-icon-plus ui-btn-icon-left" id="btnAdd" onclick="addProducto()">
+                            <a class="ui-btn ui-icon-plus ui-btn-icon-left" id="btnAdd" onclick="addProductoEspecial()">
                                 add
                             </a> 
                     </div>
@@ -165,7 +165,7 @@
         <div data-role="page" id="loadespecial">
 
             <div data-role="panel" id="loadEspecialPanel">
-                <h1> Menu</h1>
+                <h1> Menu </h1>
                 <ul data-role="listview" data-insert="true">
                     <li data-role="list-divider">Product</li>
                     <li data-icon="plus"><a href="#addpage">Reservaciones</a></li>
@@ -177,53 +177,50 @@
 
             <div data-role="header" data-position="fixed">
                 <a href="#loadEspecialPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow"></a>
-                <h1>Load product</h1>
+                <h1>Clientes</h1>
             </div>
 
             <div data-role="main" class="ui-content">
                 <form class="filterable">
                     <input data-type="search" id="txtKeyword">
                 </form>
-                <ul data-role="listview" data-filter="true" data-input="#txtKeyword" data-inset="true" id="lstProducts">
+                <ul data-role="listview" data-filter="true" data-input="#txtKeyword" data-inset="true" id="lstProductsEspecial">
                     
                 </ul>
-                <div data-role="popup" id="popupUpdateDelete">
+                <div data-role="popup" id="popupUpdateDeleteEspecial">
                     <div data-role="header">
                         <a class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-rel="back"></a>
-                        <h1>Options</h1>
+                        <h1>Opciones</h1>
                     </div>
                     <div data-role="main" class="ui-content">
-                        <a class="ui-btn ui-icon-delete ui-btn-icon-left ui-btn-inline" onclick="deleteProduct()">
-                            Delete
+                        <a class="ui-btn ui-icon-delete ui-btn-icon-left ui-btn-inline" onclick="deleteProductEspecial()">
+                            Eliminar
                         </a>
-                        <a class="ui-btn ui-icon-edit ui-btn-icon-left ui-btn-inline" href="#updatedialog">
-                            Update
+                        <a class="ui-btn ui-icon-edit ui-btn-icon-left ui-btn-inline" href="#updatedialogEspecial">
+                            Actualizar
                         </a>
                     </div>
                 </div>
             </div>  
         </div>
         
-        <div data-role="dialog" id="updatedialog">
+        <div data-role="dialog" id="updatedialogEspecial">
             <div data-role="header">
-                <h1>Update product</h1>
+                <h1>Actualizar prdocuto</h1>
             </div>
             <div data-role="main" class="ui-content">
                 <form>
                     <div class="ui-field-contain">
 
-                        <label for="txtName">Nombre</label>
-                        <input type="text" id="txtNewName" data-clear-btn="true">
+                        <label for="txtNameEs">Nombre</label>
+                        <input type="text" id="txtNewNameEs" data-clear-btn="true">
 
-                        <label for="txtEmail">Email</label>
-                        <input type="text" id="txtNewEmail" data-clear-btn="true">
+                        <label for="txtTelefonoEs">Telefono</label>
+                        <input type="number" id="txtNewTelefonoEs" data-clear-btn="true">
 
-                        <label for="txtTelefono">Telefono</label>
-                        <input type="number" id="txtNewTelefono" data-clear-btn="true">
-
-                        <label for="btnUpdate"></label>
+                        <label for="btnUpdateEs"></label>
                         <a class="ui-btn ui-icon-plus ui-btn-icon-left"
-                           id="btnUpdate" onclick="updateProduct()">Update</a>
+                           id="btnUpdateEs" onclick="updateProductEspecial()">Update</a>
                     </div>
                 </form>
             </div>

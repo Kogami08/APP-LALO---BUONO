@@ -80,3 +80,91 @@ var productos = {
         );
     }
 }
+
+
+//TENEMOS EN ESTE APARTADO AHORA SI QUE FUNCIONES QUE BAN JUNTO CON LAS BASES Y TENGAMOS LA AFIRMACION O NEGACION DE LAS ACCIONES
+
+
+
+var productos = {
+    addProduct:function(nombre,telefono){
+        base_datosReserva.bd.transaction( //variable, transaccion
+            function(tx){
+                tx.executeSql("INSERT INTO chefs(nombre, telefono) values (?1,?2)",[nombre,telefono], //evita sql inyection
+                function(tx,resultado){
+                    alert("El cliente esta en especial");
+                },
+                function(tx,error){
+                    alert("El especial no se añadio, revisa los parametros o la conexion addproduct");
+                }
+                );
+            },
+            function(error){
+                console.log("Tenemos un problema addproduct" + error.message)
+            },
+            function(){
+                console.log("Todo va bien addproduct");
+            }
+        );
+    },
+    deleteProduct:function(id){
+        base_datosReserva.bd.transaction(
+            function(tx){
+                tx.executeSql("DELETE from chefs where id = ?1",[id],
+                function(tx,resultado){
+                    alert("El reserva se elimino correctamente");
+                },
+                function(tx,error){
+                    alert("El reserva no se elimino, revisa los parametros o la coneccion deleteProduct");
+                }
+                );
+            },
+            function(error){
+                console.log("Tenemos un problema" + error.message)
+            },
+            function(){
+                console.log("Todo va bien");
+            }
+        );
+    },
+    updateProduct:function(id,nombre,telefono){
+        base_datosReserva.bd.transaction(
+            function(tx){
+                tx.executeSql("UPDATE chefs SET nombre=?1, telefono=?2 where id=?3",[nombre,telefono,id],
+                function(tx,resultado){
+                    alert("El reserva se actualizó correctamente");
+                },
+                function(tx,error){
+                    alert("El reserva no se actualizó, revisa los parametros o la coneccion updateProduct");
+                }
+                );
+            },
+            function(error){
+                console.log("Tenemos un problema" + error.message)
+            },
+            function(){
+                console.log("Todo va bien");
+            }
+        );
+    },
+    loadProduct:function(mostrarProductoEspecial){
+        base_datosReserva.bd.transaction(
+            function(tx){
+                tx.executeSql("SELECT * FROM chefs",[],
+                function(tx,resultado){
+                    mostrarProductoEspecial(resultado)
+                },
+                function(tx,error){
+                    alert("El reserva no se actualizó, revisa los parametros o la coneccion loadProduct");
+                }
+                );
+            },
+            function(error){
+                console.log("Tenemos un problema" + error.message)
+            },
+            function(){
+                console.log("Todo va bien");
+            }
+        );
+    }
+}
