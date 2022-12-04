@@ -26,7 +26,7 @@ function addProducto(){
     }else if (telefono < 0 || telefono==null){
         alert("Ingresa cantidad valida");
     }else{
-        reservas.addProduct(nombre,email,telefono);
+        productos.addProduct(nombre,email,telefono);
         
         $('#txtName').val("");
         $('#txtEmail').val("");
@@ -44,15 +44,15 @@ function addProducto(){
             console.log(item);
             var a = $('<a />');
             var h3 = $('<h3 />').text("Nombre del persona: "); //concatena con "." en su propiedad texto y lo asigna
-            var h3 = $('<h3 />').text("Email de la persona: ");
-            var h4 = $('<h4 />').text("Telefono");
+            var h2 = $('<h2 />').text("Email de la persona: ");
+            var h4 = $('<h4 />').text("Telefono: ");
             var p = $('<p />').text("Id:");
             
             var span1 = $('<span />').text(item.nombre); //propiedad item recorre los valores / .nombre -> nombre de la columna
             span1.attr("name","nombre");
             
-            var span4 = $('<span />').text(item.email); //propiedad item recorre los valores / .nombre -> nombre de la columna
-            span1.attr("name","email");
+            var span4 = $('<span />').text(item.email); 
+            span4.attr("name","email");
 
             var span2 = $('<span />').text(item.telefono);
             span2.attr("name","telefono");
@@ -61,12 +61,13 @@ function addProducto(){
             span3.attr("name","id");
             
             h3.append(span1);
-            h3.append(span4); //concatena
+            h2.append(span4); //concatena
             h4.append(span2);
             p.append(span3);
             
             a.append(h4);
             a.append(h3);
+            a.append(h2);
             a.append(p);
             
             var lista= $('<li/>');
@@ -86,15 +87,15 @@ function addProducto(){
 
 
 $(document).on("pagebeforeshow", "#loadpage", function(){ //evento
-    reservas.loadProduct(mostrarProducto);
+    productos.loadProduct(mostrarProducto);
 });
 
 function deleteProduct(){
     var respuesta = confirm("deseas eliminar el producto?");
     alert(cursor.id);
     if(respuesta){
-        reservas.deleteProduct(cursor.id);
-        reservas.loadProduct(mostrarProducto);
+        productos.deleteProduct(cursor.id);
+        productos.loadProduct(mostrarProducto);
     }
     $("#popupUpdateDelete").popup("close");
 }
@@ -109,6 +110,6 @@ function updateProduct(){
     var nuevonombre = $("#txtNewName").val();
     var nuevoemail = $("#txtNewEmail").val();
     var nuevotelefono = $("#txtNewTelefono").val();
-    reservas.updateProduct(cursor.id, nuevonombre, nuevoemail, nuevotelefono);
+    productos.updateProduct(cursor.id, nuevonombre,nuevoemail, nuevotelefono);
     $("#updatedialog").dialog("close");
 }
