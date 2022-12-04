@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+         <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <!--<link rel="stylesheet" href="css/index.css">--->
+        
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <title>SQLite app</title>
+    </head>
+    <body>
+        
+        <div data-role="page" id="addpage">
+            <div data-role="panel" id="addPagePanel">
+                <h1> Menu</h1>
+                <ul data-role="listview" data-insert="true">
+                    <li data-role="list-divider">Product</li>
+                    <li data-icon="plus"><a href="#addpage">Add</a></li>
+                    <li data-icon="grid"><a href="#loadpage">Load</a></li>
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed">
+                <a href="#addPagePanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow"></a>
+                <h1> R E S E R V A</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <form >
+                    <div class="ui-fixed-contain">
+                        <label for="txtName">Nombre</label>
+                        <input type="text" id="txtName" data-clear-btn="true">
+
+                        <label for="txtEmail">Email</label>
+                        <input type="text" id="txtEmail" data-clear-btn="true">
+
+                        <label for="txtTelefono">Telefono</label>
+                        <input type="number" id="txtTelefono" data-clear-btn="true">
+
+                        <label for="btnAdd"></label>
+                            <a class="ui-btn ui-icon-plus ui-btn-icon-left" id="btnAdd" onclick="addProducto()">
+                                add
+                            </a> 
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div data-role="page" id="loadpage">
+
+            <div data-role="panel" id="loadPagePanel">
+                <h1> Menu</h1>
+                <ul data-role="listview" data-insert="true">
+                    <li data-role="list-divider">Product</li>
+                    <li data-icon="plus"><a href="#addpage">Add</a></li>
+                    <li data-icon="grid"><a href="#loadpage">Load</a></li>
+                </ul>
+            </div>
+
+            <div data-role="header" data-position="fixed">
+                <a href="#loadPagePanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow"></a>
+                <h1>Load product</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <form class="filterable">
+                    <input data-type="search" id="txtKeyword">
+                </form>
+                <ul data-role="listview" data-filter="true" data-input="#txtKeyword" data-inset="true" id="lstProducts">
+                    
+                </ul>
+                <div data-role="popup" id="popupUpdateDelete">
+                    <div data-role="header">
+                        <a class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-rel="back"></a>
+                        <h1>Options</h1>
+                    </div>
+                    <div data-role="main" class="ui-content">
+                        <a class="ui-btn ui-icon-delete ui-btn-icon-left ui-btn-inline" onclick="deleteProduct()">
+                            Delete
+                        </a>
+                        <a class="ui-btn ui-icon-edit ui-btn-icon-left ui-btn-inline" href="#updatedialog">
+                            Update
+                        </a>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        
+        <div data-role="dialog" id="updatedialog">
+            <div data-role="header">
+                <h1>Update product</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <form>
+                    <div class="ui-field-contain">
+
+                        <label for="txtName">Nombre</label>
+                        <input type="text" id="txtName" data-clear-btn="true">
+
+                        <label for="txtEmail">Email</label>
+                        <input type="text" id="txtEmail" data-clear-btn="true">
+
+                        <label for="txtTelefono">Telefono</label>
+                        <input type="number" id="txtTelefono" data-clear-btn="true">
+
+                        <label for="btnUpdate"></label>
+                        <a class="ui-btn ui-icon-plus ui-btn-icon-left"
+                           id="btnUpdate" onclick="updateProduct()">Update</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/BD.js"></script>
+        <script src="js/productosBD.js"></script>
+    </body>
+</html>
