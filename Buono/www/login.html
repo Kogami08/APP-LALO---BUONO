@@ -9,6 +9,7 @@
 </head>
 <body>
     
+  <center>
   <div class="container">
     <form>
       <label for="username">username</label><br>
@@ -21,8 +22,31 @@
       <p id="result">Bienvenido</p>
     </form>
   </div>
+
+
+
+  <div class="app">
+    <h1 aling="center">Uso de Plugins en cordova</h1>
+    <div class="blink" id="deviceready">
+        <p class="event listening">Connxion al dispositivo</p>
+        <p class="event received">Dispositivo listo</p>
+    </div>
+    <form>
+        <Button onclick="localizacion()"> GPS </Button>
+    </form>
+</div>
+
+
+    <div>
+        <img id="image" src=""/>
+    </div>
+
+    <Button onclick="tomarFoto()" class="Bottonxd"> Tomar Picture </Button>
+</center>
       
 
 <script src="js/login.js"></script>
+<script src="cordova.js"></script>
+<script src="js/plugins.js"></script>
 </body>
 </html>

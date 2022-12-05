@@ -34,7 +34,7 @@ function addProducto(){
         alert("Ingresa cantidad valida");
     }else{
         productos.addProduct(nombre,email,telefono);
-        
+        cambiarColor(1);
         $('#txtName').val("");
         $('#txtEmail').val("");
         $('#txtTelefono').val("");
