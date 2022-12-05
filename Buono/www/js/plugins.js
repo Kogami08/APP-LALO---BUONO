@@ -18,7 +18,11 @@
               'message: ' + error.message + '\n');
     }
  
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+    
+    function localizacion(){
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
 
 
 

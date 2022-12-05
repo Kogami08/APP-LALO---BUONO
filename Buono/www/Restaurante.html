@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Buono</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <!-- Google Fonts para la pag -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <!-- Aqui se linkea el Manifest para la PWA -->
+        <link rel="manifest" href="manifest.json">
+        <link rel="shortcut icon" href="img/icon.ico">
+
+    </head>
+
+    <body id="page-top">
+
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand texto" href="#">Buono</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Home</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#">Nuestro menu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Cenas privadas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Benvenuti a bouno</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Conoce al chef</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto & Localizacion</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Administrar reservas/usuarios</a>
+                  </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+
+
+          <header class="header content">
+            <div class="header-video">
+                <video src="img/Videos/Prom2.mp4" class="videofondo" autoplay muted loop></video>
+            </div>
+
+            <div class="header-overlay"></div>
+
+            <div class="header-content">
+                <h1>Buono</h1>
+                <p>La chispa de la gran delicia</p>
+            </div>
+          </header>
+          
+          <div class="Subtitulos">
+            <div>
+                <p>Echa un vistaso a nuestros destacados</p>
+            </div>
+            <div class="contenido">
+              <div>
+                <video src="img/Videos/Videos/Desayunos ‑ Made with FlexClip.mp4" class="destacado" autoplay muted loop></video>
+              </div>
+              <div>
+                <video src="img/Videos/Videos/FFF ‑ Made with FlexClip.mp4" class="destacado" autoplay muted loop></video>
+              </div>
+              <div>
+                <video src="img/Videos/Videos/Veg.mp4" class="destacado" autoplay muted loop></video>
+              </div>
+              <div>
+                <video src="img/Videos/Videos/Juice.mp4" class="destacado" autoplay muted loop></video>
+              </div>
+              <div>
+                <video src="img/Videos/Videos/MENÚ NIÑOS ‑ Made with FlexClip.mp4" class="destacado" autoplay muted loop></video>
+              </div>
+            </div>
+          </div>
+
+            <center>
+              <div class="Subtitulos">
+                <p>O F E R T A </p>
+              </div>
+              <div class="contenido">
+                  <img src="img/BANES/BANNER1.png" class="ofertas" alt="...">
+              </div>
+            
+            
+
+              
+            <div class="Subtitulos">
+              <p>MENU</p>
+            </div>
+            
+            <div id="myBtnContainer">
+              <button class="btn active" onclick="filterSelection('all')"> Mostrar todo</button>
+              <button class="btn" onclick="filterSelection('cars')"> Mexicana</button>
+              <button class="btn" onclick="filterSelection('animals')"> Oriental</button>
+              <button class="btn" onclick="filterSelection('fruits')"> Americana</button>
+              <button class="btn" onclick="filterSelection('colors')"> Italiana</button>
+            </div>
+            
+            <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+            <div class="contenido">
+              <div class="filterDiv cars"><img src="img/COMIDAS/MEXICANA/mole.jpeg" class="destacado">MOLE (Zacatecas)</div>
+              <div class="filterDiv colors"><img src="img/COMIDAS/ITALIANA/SPAGHETTI ALLA BOLOÑESE.jpg" class="destacado">SPAGHETTI ALLA BOLOÑESE</div>
+              <div class="filterDiv cars"><img src="img/COMIDAS/MEXICANA/Pozole.jpg" class="destacado">POZOLE (Jalisco)</div>
+              <div class="filterDiv colors"><img src="img/COMIDAS/ITALIANA/BISTECK ALLA FIORENTINA.png" class="destacado">BISTECK ALLA FIORENTINA</div>
+              <div class="filterDiv cars"><img src="img/COMIDAS/MEXICANA/Chile.jpg" class="destacado">CHILE RELLENO</div>
+              <div class="filterDiv colors"><img src="img/COMIDAS/ITALIANA/FOCACCIA GENOVESA.jpg" class="destacado">FOCACCIA GENOVESA</div>
+              <div class="filterDiv animals"><img src="img/COMIDAS/ORIENTAL/LO MEIN.jpg" class="destacado">LO MEIN</div>
+              <div class="filterDiv animals"><img src="img/COMIDAS/ORIENTAL/RAMEN.jpeg" class="destacado">RAMEN</div>
+              <div class="filterDiv animals"><img src="img/COMIDAS/ORIENTAL/POLLO A LA NARANJA.jpg" class="destacado">POLLO A LA NARANJA</div>
+              <div class="filterDiv animals"><img src="img/COMIDAS/ORIENTAL/BIBIMBAP.jpg" class="destacado">BIBIMBAP</div>
+              <div class="filterDiv fruits"><img src="img/COMIDAS/AMERICANA/MAC AND CHEESE.jpg" class="destacado">MAC AND CHEESE</div>
+              <div class="filterDiv fruits"><img src="img/COMIDAS/AMERICANA/BARBECUE RIBS.jpeg" class="destacado">BARBECUE RIBS</div>
+              <div class="filterDiv fruits"><img src="img/COMIDAS/AMERICANA/PHILLY CHEESESTEAK.jpg" class="destacado">PHILLY CHEESESTEAK</div>
+              <div class="filterDiv fruits"><img src="img/COMIDAS/AMERICANA/REUBEN SANDWICH.jpeg" class="destacado">REUBEN SANDWICH</div>
+              <div class="filterDiv fruits"><img src="img/COMIDAS/AMERICANA/JAMBALAYA.webp" class="destacado">JAMBALAYA</div>
+              <div class="filterDiv animals"><img src="img/COMIDAS/ORIENTAL/UDON.jpg" class="destacado">UDON</div>
+            </div>
+            
+            <div class="espacios">
+                <button id="btn-abrir-modal" class="custom-btn btn-5 btn-abrir-modal" onclick="redireccion()">
+                  <span> Cenas privadas </span>
+                </button>
+            </div>
+              
+          </center>
+         
+
+          <div class="Subtitulos">
+            <div>
+                <p>Conoce nuestros chef</p>
+                  <div class="row g-3">
+                    <div class="col">
+                      <div class="contenido">
+                        <img src="img/chefsito.png" class="ofertas" alt="...">
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+
+              <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>Buono</h6>
+            <p class="text-justify"> <b>Visión:</b> Brindar el orgullo de estas naciones la comida tan tradicional o incluso conmemorada sin dañar la imagen y sus costumbres.</p>
+            <p class="text-justify"> <b> Misión: </b> Expandirnos en todo el mundo no solo para brindar el servicio de comidas si no para acompañar hoteles y otras comidas para ser tan memorables como un viaje.
+            </p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Contacto</h6>
+            <ul class="footer-links">
+              <p class="text-justify">Av. Ricardo Nieves #101</p>
+              <p class="text-justify">Mexico</p>
+              <p class="text-justify">Aguascalientes</p>
+              <p class="text-justify">449 347 3937 | 465 102 7302</p>
+              <p class="text-justify">Buono.Restaurant@gmail.com</p>
+            </ul>
+          </div>
+          
+          <div class="col contenido">
+            <img src="img/icon.ico" alt="">
+          </div>
+
+          
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2022 TODOS LOS DERECHOS RESERVADOS 
+         <a href="#">Scanfcode</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i>B</a></li>
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i>U</a></li>
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i>O</a></li>
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i>N</a></li>
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i>O</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+      
+      <script src="js/pag.js"></script>
+
+      <!--Comenzamos con los scripts para el ServiceWorkers-->
+      <script src="js/scripts.js"></script>
+      <script src="./script.js"></script>
+        
+      <!--Scripts para Boostrap-->
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    </body>
+</html>

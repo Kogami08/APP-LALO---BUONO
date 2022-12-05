@@ -42,6 +42,6 @@ if(user == null || user==""){
     alert('contraseña incorrecta')
 }else{
     alert('iniciando');
-    location.href='./index.html';
+    location.href='../Restaurante.html';
 }
 }
