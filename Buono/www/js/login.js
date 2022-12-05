@@ -7,7 +7,7 @@ function registrar(){
     //agregaremos una validacion para que no queden espacios vacios
 
     if (username == null || username == ""){
-        alert("Insete un usuario");
+        alert("Inserte un usuario");
     } else if (email == null || email == ""){
         alert("Agregar un email por favor")
     } else if (pass == null || pass == ""){

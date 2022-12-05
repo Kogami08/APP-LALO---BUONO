@@ -4,48 +4,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="css/login.css"> -->
+  <link rel="stylesheet" href="css/login.css">
   <title>Iniciar</title>
 </head>
 <body>
 
-  
-    
-  <center>
-  <div class="container">
-    <form>
-      <label for="username">username</label><br>
-      <input type="text" name="username" id="username"><br>
 
-      <label for="password">password</label><br>
-      <input type="password" name="password" id="password"><br>
-      
-      <button type="button" onclick="iniciar()">submit</button>
-      <p id="result">Bienvenido</p>
-    </form>
-  </div>
+  <div class="vid-container">
+    <video class="bgvid" autoplay="autoplay" muted="muted" preload="auto" loop>
+        <source src="img/Videos/Login.mp4" type="video/webm">
+    </video>
 
 
-
-  <div class="app">
-    <h1 aling="center">Uso de Plugins en cordova</h1>
-    <div class="blink" id="deviceready">
-        <p class="event listening">Connxion al dispositivo</p>
-        <p class="event received">Dispositivo listo</p>
+    <div class="inner-container">
+      <div class="box">
+        <h1>INICIAR</h1>
+        <input type="text" name="username" id="username" placeholder="Usuario">
+        <input type="password" name="password" id="password" placeholder="Contraseña">
+        <button type="button" onclick="iniciar()">Iniciar</button>
+        <Button type="button" onclick="localizacion()"> Tu hubicacion </Button>
+        <form>
+          <button onclick="tomarFoto()" class="Bottonxd"> Registrate con QR </button>
+        </form>
+        <p>No tienes una cuenta? <span><a href="registrar.html"> Registrate </a> </span></p>
+      </div>
     </div>
-    <form>
-        <Button type="button" onclick="localizacion()"> GPS </Button>
-    </form>
-</div>
-
-
-    <div>
-        <img id="image" src=""/>
-    </div>
-
-    <Button onclick="tomarFoto()" class="Bottonxd"> Tomar Picture </Button>
-</center>
-      
+  </div>      
 
 <script src="js/login.js"></script>
 <script src="cordova.js"></script>
