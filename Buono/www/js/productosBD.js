@@ -86,7 +86,7 @@ var productos = {
 
 
 
-var productos = {
+var productosEspecial = {
     addProduct:function(nombre,telefono){
         base_datosReserva.bd.transaction( //variable, transaccion
             function(tx){

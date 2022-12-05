@@ -34,7 +34,6 @@ function addProducto(){
         alert("Ingresa cantidad valida");
     }else{
         productos.addProduct(nombre,email,telefono);
-        cambiarColor(1);
         $('#txtName').val("");
         $('#txtEmail').val("");
         $('#txtTelefono').val("");
@@ -146,7 +145,7 @@ function addProductoEspecial(){
     }else if (telefono < 0 || telefono==null){
         alert("Ingresa un numero valido");
     }else{
-        productos.addProduct(nombre,telefono);
+        productosEspecial.addProduct(nombre,telefono);
         
         $('#txtNameEs').val("");
         $('#txtTelefonoEs').val("");
@@ -203,7 +202,7 @@ function addProductoEspecial(){
 
 
 $(document).on("pagebeforeshow", "#loadespecial", function(){ //evento
-    productos.loadProduct(mostrarProductoEspecial);
+    productosEspecial.loadProduct(mostrarProductoEspecial);
 });
 
 
@@ -212,8 +211,8 @@ function deleteProductEspecial(){
     var respuesta = confirm("deseas eliminar el cliente?");
     alert(cursor.id);
     if(respuesta){
-        productos.deleteProduct(cursor.id);
-        productos.loadProduct(mostrarProductoEspecial);
+        productosEspecial.deleteProduct(cursor.id);
+        productosEspecial.loadProduct(mostrarProductoEspecial);
     }
     $("#popupUpdateDeleteEspecial").popup("close");
 }
@@ -230,6 +229,6 @@ $(document).on("pagebeforeshow", "#updatedialogEspecial", function(){ //evento
 function updateProductEspecial(){
     var nuevonombre = $("#txtNewNameEs").val();
     var nuevotelefono = $("#txtNewTelefonoEs").val();
-    productos.updateProduct(cursor.id, nuevonombre, nuevotelefono);
+    productosEspecial.updateProduct(cursor.id, nuevonombre, nuevotelefono);
     $("#updatedialogEspecial").dialog("close");
 }
