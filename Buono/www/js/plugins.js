@@ -25,8 +25,6 @@
     }
 
 
-
-
     //STATUS BAR PLUGGIN
 
 function cambiarColor(index){
@@ -53,8 +51,10 @@ function cambiarColor(index){
     function onSuccess(imageData) {
         var image = document.getElementById('image');
         image.src = "data:image/jpeg;base64," + imageData;
+        cambiarColor(2);
     }
     
     function onFail(message) {
         alert('Failed because: ' + message);
+        cambiarColor(0);
     }
