@@ -232,3 +232,14 @@ function updateProductEspecial(){
     productosEspecial.updateProduct(cursor.id, nuevonombre, nuevotelefono);
     $("#updatedialogEspecial").dialog("close");
 }
+
+
+//REDIRECCION DE LOS BOTONES PARA EL INDEX/CRUD/SQLite
+
+function redireccionRestaurante() {
+    location.href='../Restaurante.html';
+}
+
+function redireccionLogin() {
+    location.href='../login.html';
+}

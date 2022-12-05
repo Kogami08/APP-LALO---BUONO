@@ -46,6 +46,8 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+//REDURECCIONES PARA EL RESTAURANTE
+
 function redireccion() {
     location.href='../index.html';
 }
